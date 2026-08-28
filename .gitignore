@@ -17,3 +17,7 @@
 !**/.env.example
 *.hprof
 .DS_Store
+
+# Copilot and Android generated output
+Medlink app/.artifacts/
+Medlink app/.build-outputs/
