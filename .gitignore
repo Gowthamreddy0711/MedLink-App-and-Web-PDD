@@ -1,0 +1,19 @@
+# Android and Gradle
+**/.gradle/
+**/build/
+**/.kotlin/
+**/local.properties
+**/.idea/
+
+# Web dependencies and build output
+**/node_modules/
+**/dist/
+**/coverage/
+**/*.log
+
+# Local configuration and generated reports
+**/.env
+**/.env.local
+!**/.env.example
+*.hprof
+.DS_Store

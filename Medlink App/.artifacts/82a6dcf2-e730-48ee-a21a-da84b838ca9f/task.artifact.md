@@ -1,5 +1,0 @@
-- [x] Implement `deleteLeaveRequest` in `FirebaseRepository.kt`
-- [x] Add real-time date filtering in `FirebaseRepository.kt` flows
-- [x] Expose delete functionality in `LeaveCoverageRepository`
-- [x] Implement automatic cleanup logic in `MedLinkViewModel.kt`
-- [x] Verify filtering and deletion functionality
