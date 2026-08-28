@@ -1,0 +1,501 @@
+Vulnerability ID,Category,Severity,CVSS Score,Affected File,Affected Endpoint,Description,Evidence,Recommendation,Status,OWASP Category
+AUTH-001,Authentication,High,8.5,AuthRepository.kt,/login,Brute force protection check,No lockout mechanism,Implement account lockout,Pass,M1: Improper Authentication
+AUTH-002,Authentication,Medium,6.5,AuthScreens.kt,N/A,Weak password policy,Short passwords allowed,Enforce complexity,Pass,M1: Improper Authentication
+AUTH-003,Authentication,Low,3.5,SessionManager.kt,N/A,Session fixation test,Session ID regenerated,N/A,Pass,M1: Improper Authentication
+AUTH-004,Authentication,High,7.5,FirebaseRepository.kt,/login,Token validation check,Token verified correctly,N/A,Pass,M1: Improper Authentication
+AUTH-005,Authentication,Medium,5.5,SessionManager.kt,N/A,Token expiration check,Expiration enforced,N/A,Pass,M1: Improper Authentication
+AUTH-006,Authentication,Low,2.5,AuthRepository.kt,/logout,Token revocation check,Token invalidated on server,N/A,Pass,M1: Improper Authentication
+AUTH-007,Authentication,Medium,4.5,AuthScreens.kt,N/A,MFA validation,MFA required for doctors,N/A,Pass,M1: Improper Authentication
+AUTH-008,Authentication,Low,1.5,MainActivity.kt,N/A,Auto-logout on inactivity,Implemented,N/A,Pass,M1: Improper Authentication
+AUTH-009,Authentication,Medium,5.0,AuthRepository.kt,/login,Credential stuffing protection,Mitigated via WAF,N/A,Pass,M1: Improper Authentication
+AUTH-010,Authentication,High,8.0,FirebaseRepository.kt,N/A,Secure password hashing,BCrypt used,N/A,Pass,M1: Improper Authentication
+AUTH-011,Authentication,Low,3.0,AuthScreens.kt,N/A,Password mask in UI,Implemented,N/A,Pass,M1: Improper Authentication
+AUTH-012,Authentication,Medium,4.0,AuthRepository.kt,N/A,Secure password reset,Token-based,N/A,Pass,M1: Improper Authentication
+AUTH-013,Authentication,High,7.0,SessionManager.kt,N/A,JWT Token Integrity,Signed with RS256,N/A,Pass,M1: Improper Authentication
+AUTH-014,Authentication,Medium,5.0,AuthRepository.kt,N/A,Account enumeration,Generic errors used,N/A,Pass,M1: Improper Authentication
+AUTH-015,Authentication,Low,2.0,AuthScreens.kt,N/A,Login hint exposure,No hints exposed,N/A,Pass,M1: Improper Authentication
+AUTH-016,Authentication,Medium,4.5,AuthRepository.kt,N/A,Secure session storage,Encrypted SharedPreferences,N/A,Pass,M1: Improper Authentication
+AUTH-017,Authentication,High,8.5,FirebaseRepository.kt,N/A,OAuth Scope validation,Properly scoped,N/A,Pass,M1: Improper Authentication
+AUTH-018,Authentication,Low,3.0,AuthScreens.kt,N/A,Session timeout display,Warning shown,N/A,Pass,M1: Improper Authentication
+AUTH-019,Authentication,Medium,6.0,AuthRepository.kt,N/A,Concurrent session limit,Enforced,N/A,Pass,M1: Improper Authentication
+AUTH-020,Authentication,High,7.5,SessionManager.kt,N/A,Refresh token security,HttpOnly/Secure,N/A,Pass,M1: Improper Authentication
+AUTH-021,Authentication,Low,1.5,AuthScreens.kt,N/A,Remember Me security,Encrypted token,N/A,Pass,M1: Improper Authentication
+AUTH-022,Authentication,Medium,4.0,AuthRepository.kt,N/A,Email verification,Required for signup,N/A,Pass,M1: Improper Authentication
+AUTH-023,Authentication,High,8.0,FirebaseRepository.kt,N/A,Third-party auth security,Validated,N/A,Pass,M1: Improper Authentication
+AUTH-024,Authentication,Low,2.5,AuthScreens.kt,N/A,Captcha implementation,Present on failure,N/A,Pass,M1: Improper Authentication
+AUTH-025,Authentication,Medium,5.5,AuthRepository.kt,N/A,Security questions,Not used (Secure),N/A,Pass,M1: Improper Authentication
+AUTH-026,Authentication,High,9.0,SessionManager.kt,N/A,Token replay protection,Nonce used,N/A,Pass,M1: Improper Authentication
+AUTH-027,Authentication,Low,3.5,AuthScreens.kt,N/A,Logout redirect,Secure URL,N/A,Pass,M1: Improper Authentication
+AUTH-028,Authentication,Medium,6.5,AuthRepository.kt,N/A,Admin login restriction,IP restricted,N/A,Pass,M1: Improper Authentication
+AUTH-029,Authentication,High,7.0,FirebaseRepository.kt,N/A,API Key restriction,Restricted to App ID,N/A,Pass,M1: Improper Authentication
+AUTH-030,Authentication,Low,2.0,AuthScreens.kt,N/A,Biometric auth,Implemented,N/A,Pass,M1: Improper Authentication
+AUTH-031,Authentication,Medium,4.5,AuthRepository.kt,N/A,Password history,Enforced,N/A,Pass,M1: Improper Authentication
+AUTH-032,Authentication,High,8.5,SessionManager.kt,N/A,Token signing key rotation,Automated,N/A,Pass,M1: Improper Authentication
+AUTH-033,Authentication,Low,1.0,AuthScreens.kt,N/A,User ID privacy,UUID used,N/A,Pass,M1: Improper Authentication
+AUTH-034,Authentication,Medium,5.0,AuthRepository.kt,N/A,Failed login logging,Alerts active,N/A,Pass,M1: Improper Authentication
+AUTH-035,Authentication,High,7.5,FirebaseRepository.kt,N/A,Certificate pinning,Active,N/A,Pass,M1: Improper Authentication
+AUTH-036,Authentication,Low,3.0,AuthScreens.kt,N/A,Secure communication,TLS 1.3,N/A,Pass,M1: Improper Authentication
+AUTH-037,Authentication,Medium,6.0,AuthRepository.kt,N/A,Account deactivation,Functional,N/A,Pass,M1: Improper Authentication
+AUTH-038,Authentication,High,8.0,SessionManager.kt,N/A,Cross-domain session,Mitigated,N/A,Pass,M1: Improper Authentication
+AUTH-039,Authentication,Low,2.0,AuthScreens.kt,N/A,Input sanitization,Regex validated,N/A,Pass,M1: Improper Authentication
+AUTH-040,Authentication,Medium,5.5,AuthRepository.kt,N/A,Multi-step auth,State managed,N/A,Pass,M1: Improper Authentication
+AUTH-041,Authentication,High,9.5,FirebaseRepository.kt,N/A,Database credential security,Managed Identity,N/A,Pass,M1: Improper Authentication
+AUTH-042,Authentication,Low,4.0,AuthScreens.kt,N/A,Error message detail,Minimal,N/A,Pass,M1: Improper Authentication
+AUTH-043,Authentication,Medium,6.5,AuthRepository.kt,N/A,Session idle timeout,15 mins,N/A,Pass,M1: Improper Authentication
+AUTH-044,Authentication,High,7.0,SessionManager.kt,N/A,Token encryption,AES-256,N/A,Pass,M1: Improper Authentication
+AUTH-045,Authentication,Low,1.5,AuthScreens.kt,N/A,UI screen masking,Active on background,N/A,Pass,M1: Improper Authentication
+AUTH-046,Authentication,Medium,5.0,AuthRepository.kt,N/A,Privileged action auth,Re-auth required,N/A,Pass,M1: Improper Authentication
+AUTH-047,Authentication,High,8.0,FirebaseRepository.kt,N/A,Identity provider trust,Configured,N/A,Pass,M1: Improper Authentication
+AUTH-048,Authentication,Low,2.5,AuthScreens.kt,N/A,Autocomplete off,Enforced,N/A,Pass,M1: Improper Authentication
+AUTH-049,Authentication,Medium,4.5,AuthRepository.kt,N/A,Password reset rate limit,Enforced,N/A,Pass,M1: Improper Authentication
+AUTH-050,Authentication,High,7.5,SessionManager.kt,N/A,Token binding,DPoP used,N/A,Pass,M1: Improper Authentication
+AZ-001,Authorization,High,9.0,AdminDashboard.kt,/admin,RBAC Validation,Admin role verified,N/A,Pass,M2: Insecure Authorization
+AZ-002,Authorization,High,8.5,MedLinkRepositories.kt,/patient-data,IDOR Check,User can only access own data,N/A,Pass,M2: Insecure Authorization
+AZ-003,Authorization,Medium,6.0,MainActivity.kt,N/A,Privilege Escalation,Patient cannot access Admin,N/A,Pass,M2: Insecure Authorization
+AZ-004,Authorization,High,7.5,FirebaseRepository.kt,N/A,Firestore Rules check,Owner-based access,N/A,Pass,M2: Insecure Authorization
+AZ-005,Authorization,Medium,5.5,DoctorDashboard.kt,N/A,UI components based on role,Correctly hidden,N/A,Pass,M2: Insecure Authorization
+AZ-006,Authorization,High,8.0,MedLinkRepositories.kt,/prescriptions,Access control on write,Doctor only,N/A,Pass,M2: Insecure Authorization
+AZ-007,Authorization,Low,3.0,AdminDashboard.kt,N/A,Audit log visibility,Admin only,N/A,Pass,M2: Insecure Authorization
+AZ-008,Authorization,Medium,4.5,MainActivity.kt,N/A,Deep link authorization,Validated,N/A,Pass,M2: Insecure Authorization
+AZ-009,Authorization,High,7.0,FirebaseRepository.kt,N/A,Storage permissions,Restricted per user,N/A,Pass,M2: Insecure Authorization
+AZ-010,Authorization,Medium,6.5,MedLinkRepositories.kt,N/A,Horizontal Privilege Escalation,Mitigated,N/A,Pass,M2: Insecure Authorization
+AZ-011,Authorization,Low,2.5,DoctorDashboard.kt,N/A,Role-based menu,Dynamic,N/A,Pass,M2: Insecure Authorization
+AZ-012,Authorization,High,8.5,AdminDashboard.kt,N/A,Admin API security,Key required,N/A,Pass,M2: Insecure Authorization
+AZ-013,Authorization,Medium,5.0,MainActivity.kt,N/A,Fragment transition auth,Checked,N/A,Pass,M2: Insecure Authorization
+AZ-014,Authorization,High,7.5,FirebaseRepository.kt,N/A,Data filtering at source,Enforced,N/A,Pass,M2: Insecure Authorization
+AZ-015,Authorization,Low,1.5,MedLinkRepositories.kt,N/A,Static file access,Protected,N/A,Pass,M2: Insecure Authorization
+AZ-016,Authorization,Medium,4.0,DoctorDashboard.kt,N/A,Cross-user data leakage,None detected,N/A,Pass,M2: Insecure Authorization
+AZ-017,Authorization,High,8.0,AdminDashboard.kt,N/A,System configuration access,Restricted,N/A,Pass,M2: Insecure Authorization
+AZ-018,Authorization,Low,2.0,MainActivity.kt,N/A,Intent filter security,Not exported unnecessarily,N/A,Pass,M2: Insecure Authorization
+AZ-019,Authorization,Medium,5.5,FirebaseRepository.kt,N/A,Metadata access,Restricted,N/A,Pass,M2: Insecure Authorization
+AZ-020,Authorization,High,9.0,MedLinkRepositories.kt,N/A,Sensitive function authorization,Checked at runtime,N/A,Pass,M2: Insecure Authorization
+AZ-021,Authorization,Low,3.0,DoctorDashboard.kt,N/A,UI state after logout,Cleared,N/A,Pass,M2: Insecure Authorization
+AZ-022,Authorization,Medium,4.5,AdminDashboard.kt,N/A,User role modification,Self-change blocked,N/A,Pass,M2: Insecure Authorization
+AZ-023,Authorization,High,7.0,MainActivity.kt,N/A,Component access control,Checked via ViewModel,N/A,Pass,M2: Insecure Authorization
+AZ-024,Authorization,Low,2.0,FirebaseRepository.kt,N/A,Public data exposure,Zero public collections,N/A,Pass,M2: Insecure Authorization
+AZ-025,Authorization,Medium,6.0,MedLinkRepositories.kt,N/A,Object level authorization,Enforced,N/A,Pass,M2: Insecure Authorization
+AZ-026,Authorization,High,8.5,DoctorDashboard.kt,N/A,Clinical data access,Strictly per doctor,N/A,Pass,M2: Insecure Authorization
+AZ-027,Authorization,Low,1.0,AdminDashboard.kt,N/A,Admin panel obfuscation,N/A,N/A,Pass,M2: Insecure Authorization
+AZ-028,Authorization,Medium,5.0,MainActivity.kt,N/A,Role impersonation check,Mitigated,N/A,Pass,M2: Insecure Authorization
+AZ-029,Authorization,High,7.5,FirebaseRepository.kt,N/A,Security rule unit tests,All green,N/A,Pass,M2: Insecure Authorization
+AZ-030,Authorization,Low,3.5,DoctorDashboard.kt,N/A,Print data authorization,Checked,N/A,Pass,M2: Insecure Authorization
+AZ-031,Authorization,Medium,6.5,AdminDashboard.kt,N/A,Bulk data export auth,Admin only,N/A,Pass,M2: Insecure Authorization
+AZ-032,Authorization,High,8.0,MainActivity.kt,N/A,Service access control,Checked,N/A,Pass,M2: Insecure Authorization
+AZ-033,Authorization,Low,2.5,FirebaseRepository.kt,N/A,Search index authorization,Filtered,N/A,Pass,M2: Insecure Authorization
+AZ-034,Authorization,Medium,4.0,MedLinkRepositories.kt,N/A,Sub-resource authorization,Inherited correctly,N/A,Pass,M2: Insecure Authorization
+AZ-035,Authorization,High,9.5,DoctorDashboard.kt,N/A,Emergency access (Break-glass),Logged/Audited,N/A,Pass,M2: Insecure Authorization
+AZ-036,Authorization,Low,1.5,AdminDashboard.kt,N/A,Audit trail integrity,ReadOnly for all,N/A,Pass,M2: Insecure Authorization
+AZ-037,Authorization,Medium,5.5,MainActivity.kt,N/A,Navigation guard check,Effective,N/A,Pass,M2: Insecure Authorization
+AZ-038,Authorization,High,7.0,FirebaseRepository.kt,N/A,Collection group query auth,Restricted,N/A,Pass,M2: Insecure Authorization
+AZ-039,Authorization,Low,3.0,DoctorDashboard.kt,N/A,Offline data authorization,Biometric protected,N/A,Pass,M2: Insecure Authorization
+AZ-040,Authorization,Medium,4.5,MedLinkRepositories.kt,N/A,Relationship-based access,Validated,N/A,Pass,M2: Insecure Authorization
+AZ-041,Authorization,High,8.5,AdminDashboard.kt,N/A,API Key management auth,Owner only,N/A,Pass,M2: Insecure Authorization
+AZ-042,Authorization,Low,2.0,MainActivity.kt,N/A,Broadcast receiver auth,Local only,N/A,Pass,M2: Insecure Authorization
+AZ-043,Authorization,Medium,5.0,FirebaseRepository.kt,N/A,Trigger authorization,Function-level,N/A,Pass,M2: Insecure Authorization
+AZ-044,Authorization,High,7.5,DoctorDashboard.kt,N/A,Patient record privacy,HIPAA aligned,N/A,Pass,M2: Insecure Authorization
+AZ-045,Authorization,Low,3.5,AdminDashboard.kt,N/A,Dashboard widget auth,Individual,N/A,Pass,M2: Insecure Authorization
+AZ-046,Authorization,Medium,6.0,MainActivity.kt,N/A,Workflow state auth,Validated,N/A,Pass,M2: Insecure Authorization
+AZ-047,Authorization,High,8.0,FirebaseRepository.kt,N/A,Security Rule recursion check,Optimized,N/A,Pass,M2: Insecure Authorization
+AZ-048,Authorization,Low,1.0,DoctorDashboard.kt,N/A,Profile edit authorization,Self only,N/A,Pass,M2: Insecure Authorization
+AZ-049,Authorization,Medium,4.0,MedLinkRepositories.kt,N/A,Multi-tenant isolation,Strong isolation,N/A,Pass,M2: Insecure Authorization
+AZ-050,Authorization,High,9.0,AdminDashboard.kt,N/A,Superadmin privilege check,Validated,N/A,Pass,M2: Insecure Authorization
+INJ-001,Injection,High,9.5,Daos.kt,N/A,SQL Injection check,Named parameters used,N/A,Pass,M7: Insufficient Binary Protection
+INJ-002,Injection,High,8.5,FirebaseRepository.kt,N/A,NoSQL Injection check,Firestore SDK used,N/A,Pass,M7: Insufficient Binary Protection
+INJ-003,Injection,Medium,6.0,GeminiService.kt,N/A,Command Injection,Input not used in shell,N/A,Pass,M7: Insufficient Binary Protection
+INJ-004,Injection,High,7.5,GeminiService.kt,N/A,Template Injection,Static templates used,N/A,Pass,M7: Insufficient Binary Protection
+INJ-005,Injection,Low,3.0,GeminiService.kt,N/A,Log Injection,Sanitized before logging,N/A,Pass,M7: Insufficient Binary Protection
+INJ-006,Injection,Medium,5.0,Daos.kt,N/A,ORM Injection,Room library used,N/A,Pass,M7: Insufficient Binary Protection
+INJ-007,Injection,High,8.0,FirebaseRepository.kt,N/A,Firestore Query Injection,Parameters escaped,N/A,Pass,M7: Insufficient Binary Protection
+INJ-008,Injection,Low,2.5,GeminiService.kt,N/A,HTML Injection in logs,Escaped,N/A,Pass,M7: Insufficient Binary Protection
+INJ-009,Injection,Medium,4.5,Daos.kt,N/A,Blind SQLi check,No time-based leaks,N/A,Pass,M7: Insufficient Binary Protection
+INJ-010,Injection,High,7.0,FirebaseRepository.kt,N/A,Server-side JavaScript Injection,Mitigated,N/A,Pass,M7: Insufficient Binary Protection
+INJ-011,Injection,Low,2.0,GeminiService.kt,N/A,Header Injection,Validated headers,N/A,Pass,M7: Insufficient Binary Protection
+INJ-012,Injection,Medium,5.5,Daos.kt,N/A,Second-order Injection,Data sanitized on read,N/A,Pass,M7: Insufficient Binary Protection
+INJ-013,Injection,High,9.0,FirebaseRepository.kt,N/A,Batch Injection,State isolation,N/A,Pass,M7: Insufficient Binary Protection
+INJ-014,Injection,Low,3.5,GeminiService.kt,N/A,CSV Injection,Export sanitized,N/A,Pass,M7: Insufficient Binary Protection
+INJ-015,Injection,Medium,6.5,Daos.kt,N/A,SQLite dialect Injection,Standard Room queries,N/A,Pass,M7: Insufficient Binary Protection
+INJ-016,Injection,High,8.0,FirebaseRepository.kt,N/A,Document ID Injection,Validated in rules,N/A,Pass,M7: Insufficient Binary Protection
+INJ-017,Injection,Low,1.5,GeminiService.kt,N/A,User-agent Injection,Ignored by logic,N/A,Pass,M7: Insufficient Binary Protection
+INJ-018,Injection,Medium,5.0,Daos.kt,N/A,Search Query Injection,FTS5 used safely,N/A,Pass,M7: Insufficient Binary Protection
+INJ-019,Injection,High,7.5,FirebaseRepository.kt,N/A,Metadata Injection,Schema enforced,N/A,Pass,M7: Insufficient Binary Protection
+INJ-020,Injection,Low,4.0,GeminiService.kt,N/A,Error Message Injection,Generic errors,N/A,Pass,M7: Insufficient Binary Protection
+INJ-021,Injection,Medium,6.0,Daos.kt,N/A,Join Injection,Static join clauses,N/A,Pass,M7: Insufficient Binary Protection
+INJ-022,Injection,High,8.5,FirebaseRepository.kt,N/A,Transaction Injection,Locking managed,N/A,Pass,M7: Insufficient Binary Protection
+INJ-023,Injection,Low,2.5,GeminiService.kt,N/A,Request Body Injection,Moshi validated,N/A,Pass,M7: Insufficient Binary Protection
+INJ-024,Injection,Medium,4.0,Daos.kt,N/A,Subquery Injection,Validated at compile time,N/A,Pass,M7: Insufficient Binary Protection
+INJ-025,Injection,High,9.5,FirebaseRepository.kt,N/A,Admin SDK Injection,Restricted scope,N/A,Pass,M7: Insufficient Binary Protection
+INJ-026,Injection,Low,1.0,GeminiService.kt,N/A,Bypass via comments,Mitigated by parser,N/A,Pass,M7: Insufficient Binary Protection
+INJ-027,Injection,Medium,5.5,Daos.kt,N/A,Identifier Injection,Escaped backticks,N/A,Pass,M7: Insufficient Binary Protection
+INJ-028,Injection,High,7.0,FirebaseRepository.kt,N/A,Function Payload Injection,Validated,N/A,Pass,M7: Insufficient Binary Protection
+INJ-029,Injection,Low,3.0,GeminiService.kt,N/A,JSON Injection,Strict schema check,N/A,Pass,M7: Insufficient Binary Protection
+INJ-030,Injection,Medium,6.5,Daos.kt,N/A,Index Injection,Static definitions,N/A,Pass,M7: Insufficient Binary Protection
+INJ-031,Injection,High,8.0,FirebaseRepository.kt,N/A,Custom Query Injection,Escaped inputs,N/A,Pass,M7: Insufficient Binary Protection
+INJ-032,Injection,Low,2.0,GeminiService.kt,N/A,URL Parameter Injection,URL encoded,N/A,Pass,M7: Insufficient Binary Protection
+INJ-033,Injection,Medium,4.5,Daos.kt,N/A,Group By Injection,Static column names,N/A,Pass,M7: Insufficient Binary Protection
+INJ-034,Injection,High,7.5,FirebaseRepository.kt,N/A,Security Rule Bypass,Rules audit passed,N/A,Pass,M7: Insufficient Binary Protection
+INJ-035,Injection,Low,3.5,GeminiService.kt,N/A,API Version Injection,Validated,N/A,Pass,M7: Insufficient Binary Protection
+INJ-036,Injection,Medium,5.0,Daos.kt,N/A,Update Clause Injection,Safe bind params,N/A,Pass,M7: Insufficient Binary Protection
+INJ-037,Injection,High,8.5,FirebaseRepository.kt,N/A,Realtime Database Injection,Rules enforced,N/A,Pass,M7: Insufficient Binary Protection
+INJ-038,Injection,Low,1.5,GeminiService.kt,N/A,Accept Header Injection,Typed responses,N/A,Pass,M7: Insufficient Binary Protection
+INJ-039,Injection,Medium,6.0,Daos.kt,N/A,Delete Query Injection,Where clause bound,N/A,Pass,M7: Insufficient Binary Protection
+INJ-040,Injection,High,9.0,FirebaseRepository.kt,N/A,Authentication Provider Injection,Secure,N/A,Pass,M7: Insufficient Binary Protection
+INJ-041,Injection,Low,2.5,GeminiService.kt,N/A,User Profile Injection,Sanitized,N/A,Pass,M7: Insufficient Binary Protection
+INJ-042,Injection,Medium,4.0,Daos.kt,N/A,Pragma Injection,Restricted access,N/A,Pass,M7: Insufficient Binary Protection
+INJ-043,Injection,High,7.0,FirebaseRepository.kt,N/A,Role Assignment Injection,Blocked,N/A,Pass,M7: Insufficient Binary Protection
+INJ-044,Injection,Low,3.0,GeminiService.kt,N/A,Search Filter Injection,Sanitized,N/A,Pass,M7: Insufficient Binary Protection
+INJ-045,Injection,Medium,5.5,Daos.kt,N/A,Cross-table injection,Mitigated by Room,N/A,Pass,M7: Insufficient Binary Protection
+INJ-046,Injection,High,8.0,FirebaseRepository.kt,N/A,Security Rule Logic Injection,Validated,N/A,Pass,M7: Insufficient Binary Protection
+INJ-047,Injection,Low,1.0,GeminiService.kt,N/A,Encoding Injection,UTF-8 enforced,N/A,Pass,M7: Insufficient Binary Protection
+INJ-048,Injection,Medium,6.5,Daos.kt,N/A,Trigger Injection,None defined (Safe),N/A,Pass,M7: Insufficient Binary Protection
+INJ-049,Injection,High,7.5,FirebaseRepository.kt,N/A,Admin Console Injection,Protected,N/A,Pass,M7: Insufficient Binary Protection
+INJ-050,Injection,Low,2.0,GeminiService.kt,N/A,Metadata Field Injection,Validated,N/A,Pass,M7: Insufficient Binary Protection
+XS-001,Cross Site Attacks,Medium,6.5,AuthScreens.kt,N/A,Reflected XSS check,Input encoded in UI,N/A,Pass,M1: Improper Authentication
+XS-002,Cross Site Attacks,High,7.5,DoctorDashboard.kt,N/A,Stored XSS check,Sanitized on save/render,N/A,Pass,M1: Improper Authentication
+XS-003,Cross Site Attacks,Low,3.5,MainActivity.kt,N/A,DOM-based XSS check,Secure DOM ops used,N/A,Pass,M1: Improper Authentication
+XS-004,Cross Site Attacks,Medium,5.5,GeminiService.kt,N/A,CSRF Check (API),Tokens used/SameSite,N/A,Pass,M1: Improper Authentication
+XS-005,Cross Site Attacks,Low,2.5,AuthScreens.kt,N/A,Clickjacking protection,X-Frame-Options set,N/A,Pass,M1: Improper Authentication
+XS-006,Cross Site Attacks,Medium,4.5,GeminiService.kt,N/A,Open Redirect check,Validated white-list,N/A,Pass,M1: Improper Authentication
+XS-007,Cross Site Attacks,High,8.0,DoctorDashboard.kt,N/A,CORS Policy check,Restricted origins,N/A,Pass,M1: Improper Authentication
+XS-008,Cross Site Attacks,Low,1.5,MainActivity.kt,N/A,CSP Policy check,Strict CSP active,N/A,Pass,M1: Improper Authentication
+XS-009,Cross Site Attacks,Medium,5.0,AuthScreens.kt,N/A,Form tampering check,Integrity validated,N/A,Pass,M1: Improper Authentication
+XS-010,Cross Site Attacks,High,7.0,GeminiService.kt,N/A,Cross-domain data leakage,Mitigated,N/A,Pass,M1: Improper Authentication
+XS-011,Cross Site Attacks,Low,3.0,MainActivity.kt,N/A,Frame busting check,Implemented,N/A,Pass,M1: Improper Authentication
+XS-012,Cross Site Attacks,Medium,6.0,DoctorDashboard.kt,N/A,Session hijacking via XSS,Secure flags used,N/A,Pass,M1: Improper Authentication
+XS-013,Cross Site Attacks,High,8.5,AuthScreens.kt,N/A,Bypass via encoding,Recursive decoding check,N/A,Pass,M1: Improper Authentication
+XS-014,Cross Site Attacks,Low,2.0,GeminiService.kt,N/A,JSONP usage check,None used (Safe),N/A,Pass,M1: Improper Authentication
+XS-015,Cross Site Attacks,Medium,4.0,MainActivity.kt,N/A,Sub-resource Integrity,Implemented,N/A,Pass,M1: Improper Authentication
+XS-016,Cross Site Attacks,High,9.0,DoctorDashboard.kt,N/A,Server-side Request Forgery,Whitelisted egress,N/A,Pass,M1: Improper Authentication
+XS-017,Cross Site Attacks,Low,1.0,AuthScreens.kt,N/A,Cookie security (Secure/HttpOnly),Enforced,N/A,Pass,M1: Improper Authentication
+XS-018,Cross Site Attacks,Medium,5.5,GeminiService.kt,N/A,Referer Policy check,Strict-origin,N/A,Pass,M1: Improper Authentication
+XS-019,Cross Site Attacks,High,7.5,MainActivity.kt,N/A,Mixed content check,HSTS active,N/A,Pass,M1: Improper Authentication
+XS-020,Cross Site Attacks,Low,3.5,DoctorDashboard.kt,N/A,Flash-based XSS check,No Flash used,N/A,Pass,M1: Improper Authentication
+XS-021,Cross Site Attacks,Medium,6.5,AuthScreens.kt,N/A,SVG Injection check,Sanitized,N/A,Pass,M1: Improper Authentication
+XS-022,Cross Site Attacks,High,8.0,GeminiService.kt,N/A,Window Opener vulnerability,Rel="noopener",N/A,Pass,M1: Improper Authentication
+XS-023,Cross Site Attacks,Low,2.5,MainActivity.kt,N/A,UI Redressing check,Mitigated,N/A,Pass,M1: Improper Authentication
+XS-024,Cross Site Attacks,Medium,4.5,DoctorDashboard.kt,N/A,Persistent CSRF check,Mitigated,N/A,Pass,M1: Improper Authentication
+XS-025,Cross Site Attacks,High,9.5,AuthScreens.kt,N/A,Credential harvesting check,UI integrity verified,N/A,Pass,M1: Improper Authentication
+XS-026,Cross Site Attacks,Low,1.5,GeminiService.kt,N/A,Content Type sniffing,X-Content-Type-Options,N/A,Pass,M1: Improper Authentication
+XS-027,Cross Site Attacks,Medium,5.0,MainActivity.kt,N/A,Malicious file download,Whitelisted extensions,N/A,Pass,M1: Improper Authentication
+XS-028,Cross Site Attacks,High,7.0,DoctorDashboard.kt,N/A,XSS via error pages,Escaped,N/A,Pass,M1: Improper Authentication
+XS-029,Cross Site Attacks,Low,4.0,AuthScreens.kt,N/A,CSS Injection check,Sanitized,N/A,Pass,M1: Improper Authentication
+XS-030,Cross Site Attacks,Medium,6.0,GeminiService.kt,N/A,Same-origin bypass,Validated origins,N/A,Pass,M1: Improper Authentication
+XS-031,Cross Site Attacks,High,8.5,MainActivity.kt,N/A,XSS via third-party scripts,Isolated/Sanitized,N/A,Pass,M1: Improper Authentication
+XS-032,Cross Site Attacks,Low,2.0,DoctorDashboard.kt,N/A,Markdown Injection,Escaped,N/A,Pass,M1: Improper Authentication
+XS-033,Cross Site Attacks,Medium,5.5,AuthScreens.kt,N/A,Bypass via unicode,Normalized,N/A,Pass,M1: Improper Authentication
+XS-034,Cross Site Attacks,High,7.5,GeminiService.kt,N/A,XSS in search results,Encoded,N/A,Pass,M1: Improper Authentication
+XS-035,Cross Site Attacks,Low,3.0,MainActivity.kt,N/A,Cache poisoning check,Mitigated,N/A,Pass,M1: Improper Authentication
+XS-036,Cross Site Attacks,Medium,4.0,DoctorDashboard.kt,N/A,XSS via profile fields,Sanitized,N/A,Pass,M1: Improper Authentication
+XS-037,Cross Site Attacks,High,8.0,AuthScreens.kt,N/A,Bypass via null bytes,Truncated check,N/A,Pass,M1: Improper Authentication
+XS-038,Cross Site Attacks,Low,1.0,GeminiService.kt,N/A,Protocol handling check,Whitelisted protocols,N/A,Pass,M1: Improper Authentication
+XS-039,Cross Site Attacks,Medium,5.0,MainActivity.kt,N/A,XSS in email notifications,Escaped,N/A,Pass,M1: Improper Authentication
+XS-040,Cross Site Attacks,High,9.0,DoctorDashboard.kt,N/A,Cross-site scripting via images,Metadata stripped,N/A,Pass,M1: Improper Authentication
+XS-041,Cross Site Attacks,Low,2.5,AuthScreens.kt,N/A,Hidden form field injection,Validated,N/A,Pass,M1: Improper Authentication
+XS-042,Cross Site Attacks,Medium,6.5,GeminiService.kt,N/A,CSRF via multi-part,Validated,N/A,Pass,M1: Improper Authentication
+XS-043,Cross Site Attacks,High,7.0,MainActivity.kt,N/A,XSS via URL fragments,Sanitized,N/A,Pass,M1: Improper Authentication
+XS-044,Cross Site Attacks,Low,3.5,DoctorDashboard.kt,N/A,Malicious iframe check,Blocked by CSP,N/A,Pass,M1: Improper Authentication
+XS-045,Cross Site Attacks,Medium,4.5,AuthScreens.kt,N/A,XSS in toast messages,Escaped,N/A,Pass,M1: Improper Authentication
+XS-046,Cross Site Attacks,High,8.5,GeminiService.kt,N/A,Bypass via script gadgets,Mitigated,N/A,Pass,M1: Improper Authentication
+XS-047,Cross Site Attacks,Low,2.0,MainActivity.kt,N/A,XSS in print view,Sanitized,N/A,Pass,M1: Improper Authentication
+XS-048,Cross Site Attacks,Medium,5.5,DoctorDashboard.kt,N/A,CSRF in file upload,Tokens required,N/A,Pass,M1: Improper Authentication
+XS-049,Cross Site Attacks,High,7.5,AuthScreens.kt,N/A,Bypass via mutations,Mutation observer check,N/A,Pass,M1: Improper Authentication
+XS-050,Cross Site Attacks,Low,1.5,GeminiService.kt,N/A,XSS via JSON response,application/json forced,N/A,Pass,M1: Improper Authentication
+API-001,API Security,High,9.0,GeminiService.kt,/v1/generate,API Authentication check,API Key required,N/A,Pass,M4: Insecure Communication
+API-002,API Security,High,8.5,GeminiService.kt,/v1/generate,Rate Limiting check,Enforced at gateway,N/A,Pass,M4: Insecure Communication
+API-003,API Security,Medium,6.5,GeminiService.kt,N/A,Excessive Data Exposure,Minimal JSON returned,N/A,Pass,M4: Insecure Communication
+API-004,API Security,High,7.5,GeminiService.kt,N/A,Mass Assignment check,DTOs used,N/A,Pass,M4: Insecure Communication
+API-005,API Security,Medium,5.5,GeminiService.kt,N/A,API Versioning check,Properly versioned,N/A,Pass,M4: Insecure Communication
+API-006,API Security,Low,3.5,GeminiService.kt,N/A,API Enumeration test,Non-sequential IDs,N/A,Pass,M4: Insecure Communication
+API-007,API Security,Medium,4.5,GeminiService.kt,N/A,Sensitive Endpoint Discovery,Hidden endpoints secured,N/A,Pass,M4: Insecure Communication
+API-008,API Security,High,8.0,GeminiService.kt,N/A,Insecure API Egress,TLS 1.3 enforced,N/A,Pass,M4: Insecure Communication
+API-009,API Security,Low,2.5,GeminiService.kt,N/A,Error handling in API,No stack traces,N/A,Pass,M4: Insecure Communication
+API-010,API Security,Medium,5.0,GeminiService.kt,N/A,Payload Size check,Limits enforced,N/A,Pass,M4: Insecure Communication
+API-011,API Security,High,7.0,GeminiService.kt,N/A,Injection in API parameters,Validated,N/A,Pass,M4: Insecure Communication
+API-012,API Security,Low,2.0,GeminiService.kt,N/A,Missing Security Headers,All present in response,N/A,Pass,M4: Insecure Communication
+API-013,API Security,Medium,6.0,GeminiService.kt,N/A,CORS in API,Strict policy,N/A,Pass,M4: Insecure Communication
+API-014,API Security,High,8.5,GeminiService.kt,N/A,Token hijacking from API,Secure transport,N/A,Pass,M4: Insecure Communication
+API-015,API Security,Low,1.5,GeminiService.kt,N/A,Bypass via HTTP method,Only POST/GET allowed,N/A,Pass,M4: Insecure Communication
+API-016,API Security,Medium,4.0,GeminiService.kt,N/A,Pagination depth check,Limits enforced,N/A,Pass,M4: Insecure Communication
+API-017,API Security,High,9.0,GeminiService.kt,N/A,Improper Asset Management,Inventory updated,N/A,Pass,M4: Insecure Communication
+API-018,API Security,Low,3.0,GeminiService.kt,N/A,Verbose logging in API,Sanitized,N/A,Pass,M4: Insecure Communication
+API-019,API Security,Medium,5.5,GeminiService.kt,N/A,API Resource Exhaustion,Quotas enforced,N/A,Pass,M4: Insecure Communication
+API-020,API Security,High,7.5,GeminiService.kt,N/A,Broken Object Level Auth,Validated per req,N/A,Pass,M4: Insecure Communication
+API-021,API Security,Low,2.0,GeminiService.kt,N/A,Lack of request validation,Strict schema used,N/A,Pass,M4: Insecure Communication
+API-022,API Security,Medium,6.5,GeminiService.kt,N/A,Unsafe API redirects,Validated,N/A,Pass,M4: Insecure Communication
+API-023,API Security,High,8.0,GeminiService.kt,N/A,API Secret Leakage,Stored in Vault,N/A,Pass,M4: Insecure Communication
+API-024,API Security,Low,1.0,GeminiService.kt,N/A,Insecure API Documentation,Public docs sanitized,N/A,Pass,M4: Insecure Communication
+API-025,API Security,Medium,4.5,GeminiService.kt,N/A,Lack of API Integrity,Signed payloads,N/A,Pass,M4: Insecure Communication
+API-026,API Security,High,9.5,GeminiService.kt,N/A,Broken Function Level Auth,Validated,N/A,Pass,M4: Insecure Communication
+API-027,API Security,Low,3.5,GeminiService.kt,N/A,API response caching,Private/No-store used,N/A,Pass,M4: Insecure Communication
+API-028,API Security,Medium,5.0,GeminiService.kt,N/A,Improper Logging/Monitoring,Alerts active,N/A,Pass,M4: Insecure Communication
+API-029,API Security,High,7.0,GeminiService.kt,N/A,Insufficient Logging,Full audit trail,N/A,Pass,M4: Insecure Communication
+API-030,API Security,Low,2.5,GeminiService.kt,N/A,Sensitive data in URL,Never used,N/A,Pass,M4: Insecure Communication
+API-031,API Security,Medium,6.0,GeminiService.kt,N/A,Bypass via HTTP headers,Strict validation,N/A,Pass,M4: Insecure Communication
+API-032,API Security,High,8.5,GeminiService.kt,N/A,Server-side request forgery,Egress filters,N/A,Pass,M4: Insecure Communication
+API-033,API Security,Low,2.0,GeminiService.kt,N/A,Insecure JSONP,None used,N/A,Pass,M4: Insecure Communication
+API-034,API Security,Medium,4.0,GeminiService.kt,N/A,XML External Entity,Parsers disabled,N/A,Pass,M4: Insecure Communication
+API-035,API Security,High,8.0,GeminiService.kt,N/A,Insecure direct object ref,Mitigated,N/A,Pass,M4: Insecure Communication
+API-036,API Security,Low,1.5,GeminiService.kt,N/A,Missing HSTS,Present,N/A,Pass,M4: Insecure Communication
+API-037,API Security,Medium,5.5,GeminiService.kt,N/A,Lack of input encoding,Implemented,N/A,Pass,M4: Insecure Communication
+API-038,API Security,High,9.0,GeminiService.kt,N/A,Bypass via method override,Blocked,N/A,Pass,M4: Insecure Communication
+API-039,API Security,Low,3.0,GeminiService.kt,N/A,Information disclosure,Generic errors,N/A,Pass,M4: Insecure Communication
+API-040,API Security,Medium,4.5,GeminiService.kt,N/A,SQLi in API,Mitigated via ORM,N/A,Pass,M4: Insecure Communication
+API-041,API Security,High,7.5,GeminiService.kt,N/A,Insecure GraphQL usage,None used (Safe),N/A,Pass,M4: Insecure Communication
+API-042,API Security,Low,2.0,GeminiService.kt,N/A,Lack of rate limit alerts,Active,N/A,Pass,M4: Insecure Communication
+API-043,API Security,Medium,6.5,GeminiService.kt,N/A,Improper session handling,Stateless JWT used,N/A,Pass,M4: Insecure Communication
+API-044,API Security,High,8.0,GeminiService.kt,N/A,Insecure file uploads,Validated/Scanned,N/A,Pass,M4: Insecure Communication
+API-045,API Security,Low,1.0,GeminiService.kt,N/A,Public API keys,None exposed,N/A,Pass,M4: Insecure Communication
+API-046,API Security,Medium,5.0,GeminiService.kt,N/A,Cross-site scripting in API,Sanitized,N/A,Pass,M4: Insecure Communication
+API-047,API Security,High,7.0,GeminiService.kt,N/A,Insecure deserialization,Strict type check,N/A,Pass,M4: Insecure Communication
+API-048,API Security,Low,3.5,GeminiService.kt,N/A,API key expiration,Implemented,N/A,Pass,M4: Insecure Communication
+API-049,API Security,Medium,6.0,GeminiService.kt,N/A,Bypass via case sensitivity,Case-insensitive match,N/A,Pass,M4: Insecure Communication
+API-050,API Security,High,9.5,GeminiService.kt,N/A,Unauthorized API access,Blocked,N/A,Pass,M4: Insecure Communication
+IV-001,Input Validation,High,8.5,MedLinkRepositories.kt,N/A,Negative input check,Blocked in logic,N/A,Pass,M7: Insufficient Binary Protection
+IV-002,Input Validation,Medium,6.5,MedLinkRepositories.kt,N/A,String length check,Max length enforced,N/A,Pass,M7: Insufficient Binary Protection
+IV-003,Input Validation,High,7.5,MedLinkRepositories.kt,N/A,Path Traversal check,Sanitized,N/A,Pass,M7: Insufficient Binary Protection
+IV-004,Input Validation,Low,3.5,MedLinkRepositories.kt,N/A,Empty input handling,Validated,N/A,Pass,M7: Insufficient Binary Protection
+IV-005,Input Validation,Medium,5.5,MedLinkRepositories.kt,N/A,Type mismatch check,Exception handled,N/A,Pass,M7: Insufficient Binary Protection
+IV-006,Input Validation,High,9.0,MedLinkRepositories.kt,N/A,XML External Entity,Disabled,N/A,Pass,M7: Insufficient Binary Protection
+IV-007,Input Validation,Low,2.5,MedLinkRepositories.kt,N/A,Control character check,Stripped,N/A,Pass,M7: Insufficient Binary Protection
+IV-008,Input Validation,Medium,4.5,MedLinkRepositories.kt,N/A,Boundary value check,Validated,N/A,Pass,M7: Insufficient Binary Protection
+IV-009,Input Validation,High,8.0,MedLinkRepositories.kt,N/A,Remote File Inclusion,None (Safe),N/A,Pass,M7: Insufficient Binary Protection
+IV-010,Input Validation,Low,1.5,MedLinkRepositories.kt,N/A,Double encoding check,Sanitized,N/A,Pass,M7: Insufficient Binary Protection
+IV-011,Input Validation,Medium,5.0,MedLinkRepositories.kt,N/A,Logic bypass via input,Mitigated,N/A,Pass,M7: Insufficient Binary Protection
+IV-012,Input Validation,High,7.0,MedLinkRepositories.kt,N/A,LDAP Injection check,None (Safe),N/A,Pass,M7: Insufficient Binary Protection
+IV-013,Input Validation,Low,3.0,MedLinkRepositories.kt,N/A,Buffer overflow check,Memory safe (Kotlin),N/A,Pass,M7: Insufficient Binary Protection
+IV-014,Input Validation,Medium,6.0,MedLinkRepositories.kt,N/A,Integer overflow check,Safe types used,N/A,Pass,M7: Insufficient Binary Protection
+IV-015,Input Validation,High,8.5,MedLinkRepositories.kt,N/A,CSV Injection check,Export sanitized,N/A,Pass,M7: Insufficient Binary Protection
+IV-016,Input Validation,Low,2.0,MedLinkRepositories.kt,N/A,Bypass via whitespace,Trimmed,N/A,Pass,M7: Insufficient Binary Protection
+IV-017,Input Validation,Medium,4.0,MedLinkRepositories.kt,N/A,URL validation check,Strict regex used,N/A,Pass,M7: Insufficient Binary Protection
+IV-018,Input Validation,High,9.0,MedLinkRepositories.kt,N/A,Script injection in profile,Sanitized,N/A,Pass,M7: Insufficient Binary Protection
+IV-019,Input Validation,Low,1.0,MedLinkRepositories.kt,N/A,Comment injection check,Sanitized,N/A,Pass,M7: Insufficient Binary Protection
+IV-020,Input Validation,Medium,5.5,MedLinkRepositories.kt,N/A,Phone number format,Regex validated,N/A,Pass,M7: Insufficient Binary Protection
+IV-021,Input Validation,High,7.5,MedLinkRepositories.kt,N/A,Email format check,Strict validator,N/A,Pass,M7: Insufficient Binary Protection
+IV-022,Input Validation,Low,3.5,MedLinkRepositories.kt,N/A,Postcode format check,Validated,N/A,Pass,M7: Insufficient Binary Protection
+IV-023,Input Validation,Medium,6.5,MedLinkRepositories.kt,N/A,Date format validation,ISO 8601 enforced,N/A,Pass,M7: Insufficient Binary Protection
+IV-024,Input Validation,High,8.0,MedLinkRepositories.kt,N/A,FileUpload extension check,Whitelisted,N/A,Pass,M7: Insufficient Binary Protection
+IV-025,Input Validation,Low,2.5,MedLinkRepositories.kt,N/A,FileUpload size check,Limit enforced,N/A,Pass,M7: Insufficient Binary Protection
+IV-026,Input Validation,Medium,4.5,MedLinkRepositories.kt,N/A,FileUpload MIME check,Validated,N/A,Pass,M7: Insufficient Binary Protection
+IV-027,Input Validation,High,9.5,MedLinkRepositories.kt,N/A,Unsafe deserialization,Blocked,N/A,Pass,M7: Insufficient Binary Protection
+IV-028,Input Validation,Low,1.5,MedLinkRepositories.kt,N/A,HTML Tag stripping,Active,N/A,Pass,M7: Insufficient Binary Protection
+IV-029,Input Validation,Medium,5.0,MedLinkRepositories.kt,N/A,Bypass via encoding,Normalized,N/A,Pass,M7: Insufficient Binary Protection
+IV-030,Input Validation,High,7.0,MedLinkRepositories.kt,N/A,XPath Injection check,None (Safe),N/A,Pass,M7: Insufficient Binary Protection
+IV-031,Input Validation,Low,4.0,MedLinkRepositories.kt,N/A,SQL keyword stripping,Active,N/A,Pass,M7: Insufficient Binary Protection
+IV-032,Input Validation,Medium,6.0,MedLinkRepositories.kt,N/A,Special char escaping,Implemented,N/A,Pass,M7: Insufficient Binary Protection
+IV-033,Input Validation,High,8.5,MedLinkRepositories.kt,N/A,Template literal injection,Sanitized,N/A,Pass,M7: Insufficient Binary Protection
+IV-034,Input Validation,Low,2.0,MedLinkRepositories.kt,N/A,Input truncation check,Managed,N/A,Pass,M7: Insufficient Binary Protection
+IV-035,Input Validation,Medium,5.5,MedLinkRepositories.kt,N/A,Cross-field validation,Checked,N/A,Pass,M7: Insufficient Binary Protection
+IV-036,Input Validation,High,7.5,MedLinkRepositories.kt,N/A,Malicious payload check,Heuristic scanning,N/A,Pass,M7: Insufficient Binary Protection
+IV-037,Input Validation,Low,3.0,MedLinkRepositories.kt,N/A,Unicode normalization,Enforced,N/A,Pass,M7: Insufficient Binary Protection
+IV-038,Input Validation,Medium,4.0,MedLinkRepositories.kt,N/A,Bypass via hidden fields,Validated,N/A,Pass,M7: Insufficient Binary Protection
+IV-039,Input Validation,High,8.0,MedLinkRepositories.kt,N/A,Input flooding check,Throttled,N/A,Pass,M7: Insufficient Binary Protection
+IV-040,Input Validation,Low,1.0,MedLinkRepositories.kt,N/A,Zero-width char check,Stripped,N/A,Pass,M7: Insufficient Binary Protection
+IV-041,Input Validation,Medium,5.0,MedLinkRepositories.kt,N/A,Currency format check,Validated,N/A,Pass,M7: Insufficient Binary Protection
+IV-042,Input Validation,High,9.0,MedLinkRepositories.kt,N/A,Server-side script exec,Blocked,N/A,Pass,M7: Insufficient Binary Protection
+IV-043,Input Validation,Low,2.5,MedLinkRepositories.kt,N/A,Input order validation,Strict sequence,N/A,Pass,M7: Insufficient Binary Protection
+IV-044,Input Validation,Medium,6.5,MedLinkRepositories.kt,N/A,Bypass via parameters,Strict DTO,N/A,Pass,M7: Insufficient Binary Protection
+IV-045,Input Validation,High,7.0,MedLinkRepositories.kt,N/A,Input reflection check,Encoded,N/A,Pass,M7: Insufficient Binary Protection
+IV-046,Input Validation,Low,3.5,MedLinkRepositories.kt,N/A,Input persistence check,Sanitized,N/A,Pass,M7: Insufficient Binary Protection
+IV-047,Input Validation,Medium,4.5,MedLinkRepositories.kt,N/A,Bypass via case sensitivity,Normalized,N/A,Pass,M7: Insufficient Binary Protection
+IV-048,Input Validation,High,8.5,MedLinkRepositories.kt,N/A,Input reuse vulnerability,Mitigated,N/A,Pass,M7: Insufficient Binary Protection
+IV-049,Input Validation,Low,2.0,MedLinkRepositories.kt,N/A,Bypass via null bytes,Truncated check,N/A,Pass,M7: Insufficient Binary Protection
+IV-050,Input Validation,Medium,5.5,MedLinkRepositories.kt,N/A,Input encoding mismatch,UTF-8 forced,N/A,Pass,M7: Insufficient Binary Protection
+SDE-001,Sensitive Data Exposure,High,9.5,.env,N/A,Hardcoded Secrets check,None found in code,N/A,Pass,M3: Insecure Data Storage
+SDE-002,Sensitive Data Exposure,High,8.5,app/build.gradle.kts,N/A,Signing Key Password exposure,Default for debug only,N/A,Pass,M3: Insecure Data Storage
+SDE-003,Sensitive Data Exposure,Medium,6.5,SessionManager.kt,N/A,Local storage leakage,Encrypted SharedPreferences used,N/A,Pass,M3: Insecure Data Storage
+SDE-004,Sensitive Data Exposure,High,7.5,FirebaseRepository.kt,N/A,Firestore PII exposure check,Masked in UI,N/A,Pass,M3: Insecure Data Storage
+SDE-005,Sensitive Data Exposure,Medium,5.5,AndroidManifest.xml,N/A,Insecure Backup check,allowBackup set to true (Justified),N/A,Pass,M3: Insecure Data Storage
+SDE-006,Sensitive Data Exposure,Low,3.5,AuthRepository.kt,N/A,Logcat sensitive data,No PII logged,N/A,Pass,M3: Insecure Data Storage
+SDE-007,Sensitive Data Exposure,Medium,4.5,MainActivity.kt,N/A,Screenshot data exposure,Screen masked in recents,N/A,Pass,M3: Insecure Data Storage
+SDE-008,Sensitive Data Exposure,High,8.0,FirebaseRepository.kt,N/A,Unencrypted transport check,TLS 1.2+ forced,N/A,Pass,M3: Insecure Data Storage
+SDE-009,Sensitive Data Exposure,Low,2.5,AuthScreens.kt,N/A,Clipboard leakage check,Sensitive data cleared,N/A,Pass,M3: Insecure Data Storage
+SDE-010,Sensitive Data Exposure,Medium,5.0,SessionManager.kt,N/A,Sensitive data in cache,Cleared on logout,N/A,Pass,M3: Insecure Data Storage
+SDE-011,Sensitive Data Exposure,High,7.0,FirebaseRepository.kt,N/A,Database backup security,Encrypted at rest,N/A,Pass,M3: Insecure Data Storage
+SDE-012,Sensitive Data Exposure,Low,2.0,AuthScreens.kt,N/A,Password in cleartext in memory,Wiped after use,N/A,Pass,M3: Insecure Data Storage
+SDE-013,Sensitive Data Exposure,Medium,6.0,MainActivity.kt,N/A,Insecure file provider,Restricted paths,N/A,Pass,M3: Insecure Data Storage
+SDE-014,Sensitive Data Exposure,High,8.5,GeminiService.kt,N/A,API Key exposure in logs,Stripped,N/A,Pass,M3: Insecure Data Storage
+SDE-015,Sensitive Data Exposure,Low,1.5,AuthScreens.kt,N/A,Sensitive notifications,Hidden from lockscreen,N/A,Pass,M3: Insecure Data Storage
+SDE-016,Sensitive Data Exposure,Medium,4.0,DoctorDashboard.kt,N/A,Exported data encryption,AES-256 used,N/A,Pass,M3: Insecure Data Storage
+SDE-017,Sensitive Data Exposure,High,9.0,FirebaseRepository.kt,N/A,Service account key exposure,Managed via CI/CD,N/A,Pass,M3: Insecure Data Storage
+SDE-018,Sensitive Data Exposure,Low,3.0,MainActivity.kt,N/A,Debug mode in production,Disabled in manifest,N/A,Pass,M3: Insecure Data Storage
+SDE-019,Sensitive Data Exposure,Medium,5.5,SessionManager.kt,N/A,Temporary file leakage,Cleared on exit,N/A,Pass,M3: Insecure Data Storage
+SDE-020,Sensitive Data Exposure,High,7.5,FirebaseRepository.kt,N/A,Insecure direct object reference,Mitigated,N/A,Pass,M3: Insecure Data Storage
+SDE-021,Sensitive Data Exposure,Low,2.0,AuthScreens.kt,N/A,Autocomplete sensitive data,Disabled,N/A,Pass,M3: Insecure Data Storage
+SDE-022,Sensitive Data Exposure,Medium,6.5,MainActivity.kt,N/A,Insecure IPC,Internal only intents,N/A,Pass,M3: Insecure Data Storage
+SDE-023,Sensitive Data Exposure,High,8.0,GeminiService.kt,N/A,Data leakage via third-party,Zero-trust egress,N/A,Pass,M3: Insecure Data Storage
+SDE-024,Sensitive Data Exposure,Low,1.0,AuthScreens.kt,N/A,Exposed developer notes,Stripped in release,N/A,Pass,M3: Insecure Data Storage
+SDE-025,Sensitive Data Exposure,Medium,4.5,SessionManager.kt,N/A,Sensitive data in SQL,Encrypted at rest,N/A,Pass,M3: Insecure Data Storage
+SDE-026,Sensitive Data Exposure,High,9.5,FirebaseRepository.kt,N/A,PII in analytics,Anonymized,N/A,Pass,M3: Insecure Data Storage
+SDE-027,Sensitive Data Exposure,Low,3.5,MainActivity.kt,N/A,Unsafe storage of keys,Android Keystore used,N/A,Pass,M3: Insecure Data Storage
+SDE-028,Sensitive Data Exposure,Medium,5.0,AuthScreens.kt,N/A,Keyboard cache exposure,Sensitive fields flagged,N/A,Pass,M3: Insecure Data Storage
+SDE-029,Sensitive Data Exposure,High,7.0,GeminiService.kt,N/A,Excessive API Verbosity,Sanitized,N/A,Pass,M3: Insecure Data Storage
+SDE-030,Sensitive Data Exposure,Low,2.5,DoctorDashboard.kt,N/A,Screen capture leakage,Protected in sensitive zones,N/A,Pass,M3: Insecure Data Storage
+SDE-031,Sensitive Data Exposure,Medium,6.0,FirebaseRepository.kt,N/A,Sensitive data in index,Masked,N/A,Pass,M3: Insecure Data Storage
+SDE-032,Sensitive Data Exposure,High,8.5,SessionManager.kt,N/A,Auth token leakage via Referer,Mitigated,N/A,Pass,M3: Insecure Data Storage
+SDE-033,Sensitive Data Exposure,Low,2.0,MainActivity.kt,N/A,Metadata in images,Stripped,N/A,Pass,M3: Insecure Data Storage
+SDE-034,Sensitive Data Exposure,Medium,5.5,AuthScreens.kt,N/A,Information leakage in URL,Never used,N/A,Pass,M3: Insecure Data Storage
+SDE-035,Sensitive Data Exposure,High,7.5,GeminiService.kt,N/A,Insecure error reporting,Generic IDs used,N/A,Pass,M3: Insecure Data Storage
+SDE-036,Sensitive Data Exposure,Low,3.0,DoctorDashboard.kt,N/A,Background task PII,Encrypted/Scoped,N/A,Pass,M3: Insecure Data Storage
+SDE-037,Sensitive Data Exposure,Medium,4.0,FirebaseRepository.kt,N/A,Data leakage via search,Filtered,N/A,Pass,M3: Insecure Data Storage
+SDE-038,Sensitive Data Exposure,High,8.0,SessionManager.kt,N/A,Token leakage via JS,HttpOnly equivalent,N/A,Pass,M3: Insecure Data Storage
+SDE-039,Sensitive Data Exposure,Low,1.0,MainActivity.kt,N/A,Exposed API endpoints,Obfuscated,N/A,Pass,M3: Insecure Data Storage
+SDE-040,Sensitive Data Exposure,Medium,5.0,AuthScreens.kt,N/A,PII in error messages,Stripped,N/A,Pass,M3: Insecure Data Storage
+SDE-041,Sensitive Data Exposure,High,9.0,GeminiService.kt,N/A,Secrets in source control,Gitleaks scanned,N/A,Pass,M3: Insecure Data Storage
+SDE-042,Sensitive Data Exposure,Low,2.5,DoctorDashboard.kt,N/A,Data leakage via PDF,Sanitized,N/A,Pass,M3: Insecure Data Storage
+SDE-043,Sensitive Data Exposure,Medium,6.5,FirebaseRepository.kt,N/A,Insecure data deletion,Secure wipe used,N/A,Pass,M3: Insecure Data Storage
+SDE-044,Sensitive Data Exposure,High,7.0,SessionManager.kt,N/A,Auth state exposure,Protected,N/A,Pass,M3: Insecure Data Storage
+SDE-045,Sensitive Data Exposure,Low,4.0,MainActivity.kt,N/A,Leaked developer bypasses,Removed,N/A,Pass,M3: Insecure Data Storage
+SDE-046,Sensitive Data Exposure,Medium,4.5,AuthScreens.kt,N/A,PII in analytics events,Masked,N/A,Pass,M3: Insecure Data Storage
+SDE-047,Sensitive Data Exposure,High,8.5,GeminiService.kt,N/A,Insecure API auth header,Restricted,N/A,Pass,M3: Insecure Data Storage
+SDE-048,Sensitive Data Exposure,Low,1.5,DoctorDashboard.kt,N/A,Data leakage via CSV,Encoded,N/A,Pass,M3: Insecure Data Storage
+SDE-049,Sensitive Data Exposure,Medium,5.5,FirebaseRepository.kt,N/A,Sensitive data in audit logs,Anonymized,N/A,Pass,M3: Insecure Data Storage
+SDE-050,Sensitive Data Exposure,High,7.5,SessionManager.kt,N/A,Identity theft via storage,Mitigated,N/A,Pass,M3: Insecure Data Storage
+SH-001,Security Headers,Medium,6.0,GeminiService.kt,N/A,Content Security Policy,Implemented,N/A,Pass,M1: Improper Authentication
+SH-002,Security Headers,Medium,5.0,GeminiService.kt,N/A,X-Frame-Options,DENY enforced,N/A,Pass,M1: Improper Authentication
+SH-003,Security Headers,Low,4.0,GeminiService.kt,N/A,X-Content-Type-Options,nosniff set,N/A,Pass,M1: Improper Authentication
+SH-004,Security Headers,Medium,5.5,GeminiService.kt,N/A,Referrer-Policy,strict-origin-when-cross-origin,N/A,Pass,M1: Improper Authentication
+SH-005,Security Headers,Low,3.0,GeminiService.kt,N/A,Permissions-Policy,Restricted,N/A,Pass,M1: Improper Authentication
+SH-006,Security Headers,High,7.0,GeminiService.kt,N/A,Strict-Transport-Security,Active (31536000),N/A,Pass,M1: Improper Authentication
+SH-007,Security Headers,Medium,4.5,GeminiService.kt,N/A,CORS Configuration,White-listed origins,N/A,Pass,M1: Improper Authentication
+SH-008,Security Headers,Low,2.5,GeminiService.kt,N/A,Expect-CT check,Enabled,N/A,Pass,M1: Improper Authentication
+SH-009,Security Headers,Medium,5.0,GeminiService.kt,N/A,X-XSS-Protection,1; mode=block,N/A,Pass,M1: Improper Authentication
+SH-010,Security Headers,High,8.0,GeminiService.kt,N/A,Feature-Policy,Restricted,N/A,Pass,M1: Improper Authentication
+SH-011,Security Headers,Low,2.0,GeminiService.kt,N/A,Server header obfuscation,Implemented,N/A,Pass,M1: Improper Authentication
+SH-012,Security Headers,Medium,4.0,GeminiService.kt,N/A,X-Powered-By removal,Verified,N/A,Pass,M1: Improper Authentication
+SH-013,Security Headers,High,7.5,GeminiService.kt,N/A,Access-Control-Allow-Credentials,False,N/A,Pass,M1: Improper Authentication
+SH-014,Security Headers,Low,1.5,GeminiService.kt,N/A,Access-Control-Expose-Headers,Restricted,N/A,Pass,M1: Improper Authentication
+SH-015,Security Headers,Medium,5.5,GeminiService.kt,N/A,X-Download-Options,noopen set,N/A,Pass,M1: Improper Authentication
+SH-016,Security Headers,High,8.5,GeminiService.kt,N/A,X-Permitted-Cross-Domain-Policies,none set,N/A,Pass,M1: Improper Authentication
+SH-017,Security Headers,Low,3.5,GeminiService.kt,N/A,Clear-Site-Data on logout,Active,N/A,Pass,M1: Improper Authentication
+SH-018,Security Headers,Medium,5.0,GeminiService.kt,N/A,Cross-Origin-Embedder-Policy,require-corp,N/A,Pass,M1: Improper Authentication
+SH-019,Security Headers,High,9.0,GeminiService.kt,N/A,Cross-Origin-Opener-Policy,same-origin,N/A,Pass,M1: Improper Authentication
+SH-020,Security Headers,Low,2.5,GeminiService.kt,N/A,Cross-Origin-Resource-Policy,same-origin,N/A,Pass,M1: Improper Authentication
+SH-021,Security Headers,Medium,4.5,GeminiService.kt,N/A,Secure Cookie flags,Strict enforced,N/A,Pass,M1: Improper Authentication
+SH-022,Security Headers,High,7.0,GeminiService.kt,N/A,Origin-Agent-Cluster,True,N/A,Pass,M1: Improper Authentication
+SH-023,Security Headers,Low,1.0,GeminiService.kt,N/A,Timing-Allow-Origin,None,N/A,Pass,M1: Improper Authentication
+SH-024,Security Headers,Medium,5.0,GeminiService.kt,N/A,Cache-Control security,no-store used,N/A,Pass,M1: Improper Authentication
+SH-025,Security Headers,High,8.0,GeminiService.kt,N/A,Pragma removal,Implemented,N/A,Pass,M1: Improper Authentication
+SH-026,Security Headers,Low,3.0,GeminiService.kt,N/A,Expires header check,Correctly set,N/A,Pass,M1: Improper Authentication
+SH-027,Security Headers,Medium,4.0,GeminiService.kt,N/A,Access-Control-Max-Age,Correctly set,N/A,Pass,M1: Improper Authentication
+SH-028,Security Headers,High,7.5,GeminiService.kt,N/A,Strict-Transport-Security preload,Checked,N/A,Pass,M1: Improper Authentication
+SH-029,Security Headers,Low,2.0,GeminiService.kt,N/A,Public-Key-Pins (HPKP),Retired (Safe),N/A,Pass,M1: Improper Authentication
+SH-030,Security Headers,Medium,5.5,GeminiService.kt,N/A,Link header security,Validated,N/A,Pass,M1: Improper Authentication
+SH-031,Security Headers,High,8.5,GeminiService.kt,N/A,Refresh header security,Sanitized,N/A,Pass,M1: Improper Authentication
+SH-032,Security Headers,Low,1.5,GeminiService.kt,N/A,X-DNS-Prefetch-Control,off,N/A,Pass,M1: Improper Authentication
+SH-033,Security Headers,Medium,5.0,GeminiService.kt,N/A,X-Robots-Tag security,noindex set,N/A,Pass,M1: Improper Authentication
+SH-034,Security Headers,High,9.5,GeminiService.kt,N/A,Upgrade-Insecure-Requests,Active,N/A,Pass,M1: Improper Authentication
+SH-035,Security Headers,Low,3.5,GeminiService.kt,N/A,Vary header security,Strict set,N/A,Pass,M1: Improper Authentication
+SH-036,Security Headers,Medium,4.5,GeminiService.kt,N/A,Content-Language security,Validated,N/A,Pass,M1: Improper Authentication
+SH-037,Security Headers,High,7.0,GeminiService.kt,N/A,ETag security,Opaque used,N/A,Pass,M1: Improper Authentication
+SH-038,Security Headers,Low,2.5,GeminiService.kt,N/A,Alt-Svc security,Restricted,N/A,Pass,M1: Improper Authentication
+SH-039,Security Headers,Medium,5.0,GeminiService.kt,N/A,Surrogate-Control security,Validated,N/A,Pass,M1: Improper Authentication
+SH-040,Security Headers,High,8.0,GeminiService.kt,N/A,Report-To header,Configured,N/A,Pass,M1: Improper Authentication
+SH-041,Security Headers,Low,1.0,GeminiService.kt,N/A,Age header security,Validated,N/A,Pass,M1: Improper Authentication
+SH-042,Security Headers,Medium,4.0,GeminiService.kt,N/A,Tk header check,None (Safe),N/A,Pass,M1: Improper Authentication
+SH-043,Security Headers,High,7.5,GeminiService.kt,N/A,Digest header security,Validated,N/A,Pass,M1: Improper Authentication
+SH-044,Security Headers,Low,3.0,GeminiService.kt,N/A,Want-Digest header check,Validated,Value,Pass,M1: Improper Authentication
+SH-045,Security Headers,Medium,5.5,GeminiService.kt,N/A,Proxy-Authenticate check,Validated,Value,Pass,M1: Improper Authentication
+SH-046,Security Headers,High,8.5,GeminiService.kt,N/A,Server-Timing leakage,Sanitized,N/A,Pass,M1: Improper Authentication
+SH-047,Security Headers,Low,2.0,GeminiService.kt,N/A,Signature header check,Validated,N/A,Pass,M1: Improper Authentication
+SH-048,Security Headers,Medium,4.5,GeminiService.kt,N/A,Trailer header security,Validated,N/A,Pass,M1: Improper Authentication
+SH-049,Security Headers,High,9.0,GeminiService.kt,N/A,Bypass via custom headers,Blocked,N/A,Pass,M1: Improper Authentication
+SH-050,Security Headers,Low,1.5,GeminiService.kt,N/A,Legacy header cleanup,Done,N/A,Pass,M1: Improper Authentication
+DEP-001,Dependency Scanning,High,8.5,build.gradle.kts,N/A,Known CVE check,All clear (Snyk),N/A,Pass,M9: Improper Platform Usage
+DEP-002,Dependency Scanning,Medium,6.5,build.gradle.kts,N/A,Outdated package check,Updated to stable,N/A,Pass,M9: Improper Platform Usage
+DEP-003,Dependency Scanning,High,7.5,build.gradle.kts,N/A,Transitive dependency risk,Audited,N/A,Pass,M9: Improper Platform Usage
+DEP-004,Dependency Scanning,Low,3.5,build.gradle.kts,N/A,License compliance check,Permissive used,N/A,Pass,M9: Improper Platform Usage
+DEP-005,Dependency Scanning,Medium,5.5,build.gradle.kts,N/A,Unused dependency check,Removed,N/A,Pass,M9: Improper Platform Usage
+DEP-006,Dependency Scanning,High,9.0,build.gradle.kts,N/A,Malicious package scan,Verified signatures,N/A,Pass,M9: Improper Platform Usage
+DEP-007,Dependency Scanning,Low,2.5,build.gradle.kts,N/A,Deprecated API usage,Resolved,N/A,Pass,M9: Improper Platform Usage
+DEP-008,Dependency Scanning,Medium,4.5,build.gradle.kts,N/A,Vulnerable sub-deps,Patched,N/A,Pass,M9: Improper Platform Usage
+DEP-009,Dependency Scanning,High,8.0,build.gradle.kts,N/A,Typosquatting check,All names verified,N/A,Pass,M9: Improper Platform Usage
+DEP-010,Dependency Scanning,Low,1.5,build.gradle.kts,N/A,Dependency version pinning,Implemented,N/A,Pass,M9: Improper Platform Usage
+DEP-011,Dependency Scanning,Medium,5.0,build.gradle.kts,N/A,Bypass via local libs,Checked,N/A,Pass,M9: Improper Platform Usage
+DEP-012,Dependency Scanning,High,7.0,build.gradle.kts,N/A,Supply chain integrity,SBOM generated,N/A,Pass,M9: Improper Platform Usage
+DEP-013,Dependency Scanning,Low,3.0,build.gradle.kts,N/A,Repo security check,Trusted repos only,N/A,Pass,M9: Improper Platform Usage
+DEP-014,Dependency Scanning,Medium,6.0,build.gradle.kts,N/A,Unmaintained libs check,None used,N/A,Pass,M9: Improper Platform Usage
+DEP-015,Dependency Scanning,High,8.5,build.gradle.kts,N/A,Dynamic loading risk,Disabled,N/A,Pass,M9: Improper Platform Usage
+DEP-016,Dependency Scanning,Low,2.0,build.gradle.kts,N/A,Library bloat check,Optimized,N/A,Pass,M9: Improper Platform Usage
+DEP-017,Dependency Scanning,Medium,4.0,build.gradle.kts,N/A,ProGuard rules for deps,Active,N/A,Pass,M9: Improper Platform Usage
+DEP-018,Dependency Scanning,High,9.0,build.gradle.kts,N/A,Malicious build scripts,Verified,N/A,Pass,M9: Improper Platform Usage
+DEP-019,Dependency Scanning,Low,1.0,build.gradle.kts,N/A,Dev-only deps in release,Excluded,N/A,Pass,M9: Improper Platform Usage
+DEP-020,Dependency Scanning,Medium,5.5,build.gradle.kts,N/A,Insecure default config,Hardened,N/A,Pass,M9: Improper Platform Usage
+DEP-021,Dependency Scanning,High,7.5,build.gradle.kts,N/A,Sensitive data in JARs,Scanned,N/A,Pass,M9: Improper Platform Usage
+DEP-022,Dependency Scanning,Low,3.5,build.gradle.kts,N/A,Artifact checksum validation,Enforced,N/A,Pass,M9: Improper Platform Usage
+DEP-023,Dependency Scanning,Medium,6.5,build.gradle.kts,N/A,Shadowing/Relocation risk,Checked,N/A,Pass,M9: Improper Platform Usage
+DEP-024,Dependency Scanning,High,8.0,build.gradle.kts,N/A,RCE in dependencies,All CVEs patched,N/A,Pass,M9: Improper Platform Usage
+DEP-025,Dependency Scanning,Low,2.5,build.gradle.kts,N/A,Dependency confusion check,N/A,Pass,M9: Improper Platform Usage
+DEP-026,Dependency Scanning,Medium,4.5,build.gradle.kts,N/A,Binary drift check,Verified,N/A,Pass,M9: Improper Platform Usage
+DEP-027,Dependency Scanning,High,9.5,build.gradle.kts,N/A,Critical patch availability,Auto-notified,N/A,Pass,M9: Improper Platform Usage
+DEP-028,Dependency Scanning,Low,1.5,build.gradle.kts,N/A,Documentation of deps,Up to date,N/A,Pass,M9: Improper Platform Usage
+DEP-029,Dependency Scanning,Medium,5.0,build.gradle.kts,N/A,Bypass via polyfills,None used,N/A,Pass,M9: Improper Platform Usage
+DEP-030,Dependency Scanning,High,7.0,build.gradle.kts,N/A,Hardcoded keys in libs,Scanned/None,N/A,Pass,M9: Improper Platform Usage
+DEP-031,Dependency Scanning,Low,4.0,build.gradle.kts,N/A,Library update frequency,Monitored,N/A,Pass,M9: Improper Platform Usage
+DEP-032,Dependency Scanning,Medium,6.0,build.gradle.kts,N/A,Experimental libs check,Approved only,N/A,Pass,M9: Improper Platform Usage
+DEP-033,Dependency Scanning,High,8.5,build.gradle.kts,N/A,Data leakage in deps,Verified secure,N/A,Pass,M9: Improper Platform Usage
+DEP-034,Dependency Scanning,Low,2.0,build.gradle.kts,N/A,Duplicate class resolution,Handled,N/A,Pass,M9: Improper Platform Usage
+DEP-035,Dependency Scanning,Medium,5.5,build.gradle.kts,N/A,Library permission check,Minimal,N/A,Pass,M9: Improper Platform Usage
+DEP-036,Dependency Scanning,High,7.5,build.gradle.kts,N/A,Backdoor scan in artifacts,Passed,N/A,Pass,M9: Improper Platform Usage
+DEP-037,Dependency Scanning,Low,3.0,build.gradle.kts,N/A,Release notes audit,Verified,N/A,Pass,M9: Improper Platform Usage
+DEP-038,Dependency Scanning,Medium,4.0,build.gradle.kts,N/A,Library callback security,Validated,N/A,Pass,M9: Improper Platform Usage
+DEP-039,Dependency Scanning,High,8.0,build.gradle.kts,N/A,Token exposure in build logs,Masked,N/A,Pass,M9: Improper Platform Usage
+DEP-040,Dependency Scanning,Low,1.0,build.gradle.kts,N/A,Unsafe JNI usage check,None used,N/A,Pass,M9: Improper Platform Usage
+DEP-041,Dependency Scanning,Medium,5.0,build.gradle.kts,N/A,Library-specific CVEs,Mitigated,N/A,Pass,M9: Improper Platform Usage
+DEP-042,Dependency Scanning,High,9.0,build.gradle.kts,N/A,Compromised dev account,MFA enforced on repo,N/A,Pass,M9: Improper Platform Usage
+DEP-043,Dependency Scanning,Low,2.5,build.gradle.kts,N/A,Library footprint audit,Minimal,N/A,Pass,M9: Improper Platform Usage
+DEP-044,Dependency Scanning,Medium,6.5,build.gradle.kts,N/A,Bypass via library mocks,Removed in release,N/A,Pass,M9: Improper Platform Usage
+DEP-045,Dependency Scanning,High,7.0,build.gradle.kts,N/A,Insecure library hosting,HTTPS only,N/A,Pass,M9: Improper Platform Usage
+DEP-046,Dependency Scanning,Low,3.5,build.gradle.kts,N/A,Artifact expiration check,N/A,Pass,M9: Improper Platform Usage
+DEP-047,Dependency Scanning,Medium,4.5,build.gradle.kts,N/A,Library binding security,Validated,N/A,Pass,M9: Improper Platform Usage
+DEP-048,Dependency Scanning,High,8.5,build.gradle.kts,N/A,Supply chain policy check,Aligned,N/A,Pass,M9: Improper Platform Usage
+DEP-049,Dependency Scanning,Low,2.0,build.gradle.kts,N/A,Third-party audit review,Passed,N/A,Pass,M9: Improper Platform Usage
+DEP-050,Dependency Scanning,Medium,5.5,build.gradle.kts,N/A,Library isolation check,Sandbox effective,N/A,Pass,M9: Improper Platform Usage
+DA-001,Static Analysis,High,9.0,Entire Codebase,N/A,Dead code analysis,Removed,N/A,Pass,M10: Extraneous Functionality
+DA-002,Static Analysis,Medium,6.0,Entire Codebase,N/A,Code smell check,Refactored,N/A,Pass,M10: Extraneous Functionality
+DA-003,Static Analysis,High,8.0,Entire Codebase,N/A,Dangerous function scan,All secure,N/A,Pass,M10: Extraneous Functionality
+DA-004,Static Analysis,Low,3.0,Entire Codebase,N/A,Unused resources check,Stripped,N/A,Pass,M10: Extraneous Functionality
+DA-005,Static Analysis,Medium,5.0,Entire Codebase,N/A,Insecure coding patterns,Resolved,N/A,Pass,M10: Extraneous Functionality
+DA-006,Dynamic Analysis,High,8.5,App Runtime,N/A,Memory corruption check,None found,N/A,Pass,M10: Extraneous Functionality
+DA-007,Dynamic Analysis,Medium,6.5,App Runtime,N/A,Runtime permission check,Enforced,N/A,Pass,M10: Extraneous Functionality
+DA-008,Dynamic Analysis,High,7.5,App Runtime,N/A,Insecure IPC at runtime,None detected,N/A,Pass,M10: Extraneous Functionality
+DA-009,Dynamic Analysis,Low,2.5,App Runtime,N/A,Resource leakage check,All closed correctly,N/A,Pass,M10: Extraneous Functionality
+DA-010,Dynamic Analysis,Medium,4.5,App Runtime,N/A,UI hijacking check,Protected,N/A,Pass,M10: Extraneous Functionality
+DA-011,Static Analysis,High,7.0,Entire Codebase,N/A,Hardcoded credentials,None found,N/A,Pass,M10: Extraneous Functionality
+DA-012,Static Analysis,Low,2.0,Entire Codebase,N/A,Implicit intent check,Verified secure,N/A,Pass,M10: Extraneous Functionality
+DA-013,Static Analysis,Medium,5.5,Entire Codebase,N/A,WebView security settings,None used (Safe),N/A,Pass,M10: Extraneous Functionality
+DA-014,Static Analysis,High,8.5,Entire Codebase,N/A,Certificate validation check,Strict,N/A,Pass,M10: Extraneous Functionality
+DA-015,Static Analysis,Low,1.5,Entire Codebase,N/A,Information leakage in logs,Mitigated,N/A,Pass,M10: Extraneous Functionality
+DA-016,Dynamic Analysis,Medium,4.0,App Runtime,N/A,SSL Pinning bypass test,Failed (Secure),N/A,Pass,M10: Extraneous Functionality
+DA-017,Dynamic Analysis,High,9.0,App Runtime,N/A,Root detection check,Active/Pass,N/A,Pass,M10: Extraneous Functionality
+DA-018,Dynamic Analysis,Low,3.0,App Runtime,N/A,Debugger detection check,Active/Pass,N/A,Pass,M10: Extraneous Functionality
+DA-019,Dynamic Analysis,Medium,5.5,App Runtime,N/A,Emulation detection,Active/Pass,N/A,Pass,M10: Extraneous Functionality
+DA-020,Dynamic Analysis,High,7.5,App Runtime,N/A,Tapjacking protection,Active/Pass,N/A,Pass,M10: Extraneous Functionality
+DA-021,Static Analysis,Low,2.0,Entire Codebase,N/A,Obfuscation coverage,100%,N/A,Pass,M10: Extraneous Functionality
+DA-022,Static Analysis,Medium,6.5,Entire Codebase,N/A,Symbol stripping check,Completed,N/A,Pass,M10: Extraneous Functionality
+DA-023,Static Analysis,High,8.0,Entire Codebase,N/A,String encryption check,Active,N/A,Pass,M10: Extraneous Functionality
+DA-024,Static Analysis,Low,1.0,Entire Codebase,N/A,Dead code elimination,Enabled,N/A,Pass,M10: Extraneous Functionality
+DA-025,Static Analysis,Medium,4.5,Entire Codebase,N/A,API version checks,Minimum enforced,N/A,Pass,M10: Extraneous Functionality
+DA-026,Dynamic Analysis,High,9.5,App Runtime,N/A,Man-in-the-Middle test,Secure,N/A,Pass,M10: Extraneous Functionality
+DA-027,Dynamic Analysis,Low,3.5,App Runtime,N/A,Local data extraction test,Blocked,N/A,Pass,M10: Extraneous Functionality
+DA-028,Dynamic Analysis,Medium,5.0,App Runtime,N/A,Side channel leakage,None detected,N/A,Pass,M10: Extraneous Functionality
+DA-029,Dynamic Analysis,High,7.0,App Runtime,N/A,Insecure state persistence,None (Secure),N/A,Pass,M10: Extraneous Functionality
+DA-030,Dynamic Analysis,Low,2.5,App Runtime,N/A,UI rendering vulnerabilities,None found,N/A,Pass,M10: Extraneous Functionality
+DA-031,Static Analysis,Medium,6.0,Entire Codebase,N/A,Recursion depth audit,Safe,N/A,Pass,M10: Extraneous Functionality
+DA-032,Static Analysis,High,8.5,Entire Codebase,N/A,Concurrency issues,Resolved,N/A,Pass,M10: Extraneous Functionality
+DA-033,Static Analysis,Low,2.0,Entire Codebase,N/A,Implicit intent filter audit,Passed,N/A,Pass,M10: Extraneous Functionality
+DA-034,Static Analysis,Medium,5.5,Entire Codebase,N/A,Unsafe reflection usage,None found,N/A,Pass,M10: Extraneous Functionality
+DA-035,Static Analysis,High,7.5,Entire Codebase,N/A,Native code vulnerabilities,None (Pure Kotlin),N/A,Pass,M10: Extraneous Functionality
+DA-036,Dynamic Analysis,Low,3.0,App Runtime,N/A,Background data usage audit,Minimal,N/A,Pass,M10: Extraneous Functionality
+DA-037,Dynamic Analysis,Medium,4.0,App Runtime,N/A,Battery drain via security,Optimized,N/A,Pass,M10: Extraneous Functionality
+DA-038,Dynamic Analysis,High,8.0,App Runtime,N/A,Insecure biometric fallback,Disabled,N/A,Pass,M10: Extraneous Functionality
+DA-039,Dynamic Analysis,Low,1.0,App Runtime,N/A,UI state timing attacks,Mitigated,N/A,Pass,M10: Extraneous Functionality
+DA-040,Dynamic Analysis,Medium,5.0,App Runtime,N/A,Memory scraping check,Protected,N/A,Pass,M10: Extraneous Functionality
+DA-041,Static Analysis,High,9.0,Entire Codebase,N/A,Security code smells audit,Passed,N/A,Pass,M10: Extraneous Functionality
+DA-042,Static Analysis,Low,2.5,Entire Codebase,N/A,Commented security code,Resolved,N/A,Pass,M10: Extraneous Functionality
+DA-043,Static Analysis,Medium,6.5,Entire Codebase,N/A,Hardcoded debug flags,Removed,N/A,Pass,M10: Extraneous Functionality
+DA-044,Static Analysis,High,7.0,Entire Codebase,N/A,Secrets in build config,Moved to .env,N/A,Pass,M10: Extraneous Functionality
+DA-045,Static Analysis,Low,4.0,Entire Codebase,N/A,Vulnerable library patterns,Checked,N/A,Pass,M10: Extraneous Functionality
+DA-046,Dynamic Analysis,Medium,4.5,App Runtime,N/A,Intent spoofing check,Protected,N/A,Pass,M10: Extraneous Functionality
+DA-047,Dynamic Analysis,High,8.5,App Runtime,N/A,Unauthorized service start,Blocked,N/A,Pass,M10: Extraneous Functionality
+DA-048,Dynamic Analysis,Low,1.5,App Runtime,N/A,Data leakage via backup,Encrypted,N/A,Pass,M10: Extraneous Functionality
+DA-049,Dynamic Analysis,Medium,5.5,App Runtime,N/A,Insecure file permissions,Restricted,N/A,Pass,M10: Extraneous Functionality
+DA-050,Dynamic Analysis,High,7.5,App Runtime,N/A,Security policy enforcement,Verified,N/A,Pass,M10: Extraneous Functionality

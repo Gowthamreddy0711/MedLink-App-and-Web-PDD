@@ -1,0 +1,194 @@
+/*
+ * Shared responsive baseline for the MedLink application.
+ * This file keeps the existing visual system intact while making the layout
+ * behave safely across mobile, tablet, laptop, desktop, and ultrawide screens.
+ */
+
+:root {
+  color-scheme: light;
+  --app-max-width: 1440px;
+  --app-padding-mobile: 0.75rem;
+  --app-padding-desktop: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: clip;
+  background: #f8fafc;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  min-height: 44px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+}
+
+main,
+section,
+article,
+aside,
+header,
+footer,
+nav,
+div {
+  max-width: 100%;
+}
+
+p,
+span,
+label,
+button,
+a {
+  overflow-wrap: anywhere;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+.dashboard-title {
+  font-size: clamp(1.5rem, 2.2vw + 0.75rem, 2rem); /* 24px mobile -> 28px tablet -> 32px desktop */
+  line-height: 1.2;
+}
+
+h2,
+.section-title {
+  font-size: clamp(1.25rem, 1.5vw + 0.75rem, 1.5rem); /* 20px mobile -> 22px tablet -> 24px desktop */
+  line-height: 1.3;
+}
+
+h3,
+.card-title {
+  font-size: clamp(1.125rem, 1vw + 0.875rem, 1.25rem); /* 18-20px card titles */
+  line-height: 1.35;
+}
+
+.menu-text {
+  font-size: 0.9375rem; /* 15px */
+}
+
+@media (min-width: 768px) {
+  .menu-text {
+    font-size: 1rem; /* 16px */
+  }
+}
+
+.label-text {
+  font-size: 0.84375rem; /* 13.5px (13-14px) */
+}
+
+.desc-text {
+  font-size: 0.78125rem; /* 12.5px (12-13px) */
+}
+
+.btn-text {
+  font-size: 0.90625rem; /* 14.5px (14-15px) */
+}
+
+h4,
+h5,
+h6,
+p,
+li,
+small {
+  overflow-wrap: anywhere;
+}
+
+.app-shell {
+  width: min(100%, var(--app-max-width));
+  margin-inline: auto;
+  padding-inline: var(--app-padding-mobile);
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.app-card {
+  min-width: 0;
+}
+
+.responsive-table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.responsive-modal,
+.responsive-dialog {
+  width: min(100%, 42rem);
+  max-width: calc(100vw - 1rem);
+  margin-inline: auto;
+}
+
+@media (min-width: 480px) {
+  .app-shell {
+    padding-inline: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-shell {
+    padding-inline: var(--app-padding-desktop);
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-shell {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .app-shell {
+    padding-inline: 2.5rem;
+  }
+}

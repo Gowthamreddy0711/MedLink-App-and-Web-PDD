@@ -1,0 +1,121 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User account information for patients and doctors",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "User core UID" },
+        "name": { "type": "string", "description": "Full name of the user" },
+        "email": { "type": "string", "description": "Email address" },
+        "phone": { "type": "string", "description": "Contact phone number" },
+        "role": { "type": "string", "enum": ["patient", "doctor"], "description": "User system role" },
+        "photoUrl": { "type": "string", "description": "URL to profile picture" },
+        "specialty": { "type": "string", "description": "Doctor specialty" },
+        "clinicName": { "type": "string", "description": "Doctor clinic or facility name" },
+        "clinicLocation": { "type": "string", "description": "Doctor clinic geographical location" },
+        "bio": { "type": "string", "description": "Doctor bio summary" },
+        "rating": { "type": "number", "description": "Average review rating" },
+        "reviewCount": { "type": "number", "description": "Total reviews received" },
+        "isVerified": { "type": "boolean", "description": "Doctor verified practitioner badge" },
+        "availability": { "type": "array", "description": "Weekly/daily calendar availability slot ranges" }
+      },
+      "required": ["id", "name", "email", "role"]
+    },
+    "Appointment": {
+      "title": "Appointment Record",
+      "description": "Details of patient appointments booked with practitioners",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "patientId": { "type": "string" },
+        "patientName": { "type": "string" },
+        "patientPhotoUrl": { "type": "string" },
+        "doctorId": { "type": "string" },
+        "doctorName": { "type": "string" },
+        "doctorSpecialty": { "type": "string" },
+        "doctorPhotoUrl": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "status": { "type": "string", "enum": ["Scheduled", "Completed", "Cancelled", "In Progress"] },
+        "reason": { "type": "string" },
+        "tokenNumber": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "patientId", "doctorId", "date", "time", "status"]
+    },
+    "QueueItem": {
+      "title": "Active Queue Item",
+      "description": "Current patient live checking in at a doctor clinic",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "appointmentId": { "type": "string" },
+        "patientId": { "type": "string" },
+        "patientName": { "type": "string" },
+        "patientPhotoUrl": { "type": "string" },
+        "doctorId": { "type": "string" },
+        "tokenNumber": { "type": "number" },
+        "status": { "type": "string", "enum": ["Waiting", "In Consultation", "Done", "Skipped"] },
+        "entryTime": { "type": "string" }
+      },
+      "required": ["id", "appointmentId", "patientId", "doctorId", "tokenNumber", "status"]
+    },
+    "Prescription": {
+      "title": "Medical Prescription",
+      "description": "Prescription issued to a patient after an appointment",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "appointmentId": { "type": "string" },
+        "patientId": { "type": "string" },
+        "doctorId": { "type": "string" },
+        "doctorName": { "type": "string" },
+        "specialty": { "type": "string" },
+        "doctorPhotoUrl": { "type": "string" },
+        "date": { "type": "string" },
+        "reason": { "type": "string" },
+        "diagnosis": { "type": "string" },
+        "prescription": { "type": "array" }
+      },
+      "required": ["id", "appointmentId", "patientId", "doctorId", "date", "prescription"]
+    },
+    "Notification": {
+      "title": "System Alert Notification",
+      "description": "Alert triggered for patients or doctors",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "type": { "type": "string" },
+        "date": { "type": "string" },
+        "read": { "type": "boolean" }
+      },
+      "required": ["id", "userId", "title", "body", "date", "read"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "Profiles for registered users including doctors and patients"
+    },
+    "/appointments/{appointmentId}": {
+      "schema": { "$ref": "#/entities/Appointment" },
+      "description": "Booked appointments of the system"
+    },
+    "/queue/{queueId}": {
+      "schema": { "$ref": "#/entities/QueueItem" },
+      "description": "Live clinic queues for matching medical checkups"
+    },
+    "/prescriptions/{prescriptionId}": {
+      "schema": { "$ref": "#/entities/Prescription" },
+      "description": "Records of clinical prescriptions for medical history tracking"
+    },
+    "/notifications/{notificationId}": {
+      "schema": { "$ref": "#/entities/Notification" },
+      "description": "Alert notifications dispatched to patient or doctor channels"
+    }
+  }
+}

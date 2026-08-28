@@ -1,0 +1,20 @@
+{
+  "name": "medlink-selenium-automation",
+  "version": "1.0.0",
+  "description": "E2E Web Automation for MedLink Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio run wdio.conf.js",
+    "generate-report": "node report-generator.js"
+  },
+  "dependencies": {
+    "@wdio/cli": "^8.39.0",
+    "@wdio/local-runner": "^8.39.0",
+    "@wdio/mocha-framework": "^8.39.0",
+    "@wdio/spec-reporter": "^8.39.0",
+    "chromedriver": "^126.0.0",
+    "exceljs": "^4.4.0",
+    "selenium-webdriver": "^4.22.0",
+    "webdriverio": "^8.39.0"
+  }
+}
